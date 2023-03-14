@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div class="row">
+            <div class="col-lg-6">
+                <h5>Depositor type*</h5>
+                <div class="input-group flex-nowrap" >
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input type="number" class="form-control" id="input1" placeholder="Username" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <br>
+            </div>
+            <h5 class="tear"></h5>
+                <br>
+            <div class="col-lg-6">
+                <h5>Depositor type*</h5>
+                <div class="input-group flex-nowrap" >
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input type="number" class="form-control" id="input2" placeholder="Username" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                
+                <br>
+            </div>
+            <h5 class="tear"></h5>
+                <br>
+            <div class="col-lg-6">
+                <h5>Depositor type*</h5>
+                <div class="input-group flex-nowrap" >
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input type="number" class="form-control" id="input3" placeholder="Username" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+              
+                <br>
+            </div>
+            <h5 class="tear"></h5>
+            <br>
+            <div class="col-lg-6">
+                <h5>Depositor type*</h5>
+                <div >
+                    <h4 class="re"> </h4>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+    </form>
+
+    <button onclick="add()"></button>
+    <button onclick="reference">Reference no</button>
+    <script>
+       function add(){
+            let a = Number(document.getElementById("input1").value); 
+            let b = Number(document.getElementById("input2").value);
+            let c = Number(document.getElementById("input3").value);
+
+            let e = a+b+c;
+
+            if(isNaN(a) ||isNaN(b)||isNaN(c)){
+                document.querySelector('.tear').textContent= " Authentification failed";
+      document.querySelector('.tear').style.color="red";
+            }
+            else{
+              
+      document.querySelector('.re').textContent= `${e}`;
+            }
+        }
+
+
+        function reference(){
+            let w = Number(document.getElementById("input1").value); 
+            let y = Number(document.getElementById("input2").value);
+            let z = Number(document.getElementById("input3").value);
+
+            let d = a*b*c;
+            if(isNaN(z) ||isNaN(w)||isNaN(y)){
+                document.querySelector('.tear').textContent= " Authentification failed ";
+      document.querySelector('.tear').style.color="red";
+            }
+            else{
+              
+      document.querySelector('.re').textContent= ` You are able to withdraw the amount of ${e} please do not blame us of any mistakes.Thanks for patronising`;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

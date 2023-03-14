@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .qq{
+        display: flex;
+        margin-left: 400px;
+    }
+    #loan{
+        width: 30%;
+            height: 50px;
+            border-radius: 10px;
+            border-color:gold;
+            background-color:black;
+            color: gold;
+    }
+    #payment{
+        width: 30%;
+            height: 50px;
+            border-radius: 10px;
+            border-color:gold;
+            background-color:black;
+            color: gold;   
+    }
+    .tt{
+        width: 20%;
+            height: 50px;
+            border-radius: 10px;
+            border-color: black;
+            background-color:gold;
+            color: #000;
+    }
+    #amount{
+        width: 30%;
+            height: 50px;
+            border-radius: 10px;
+            border-color: gold;
+            background-color:black;
+            color: gold;
+    }
+    
+</style>
+<body>
+    <h1 style="color: gold;text-align: center;">LOAN <span style="color: #000;"> CALCULATOR</span></h1>
+    <div class="qq">
+        <input type="number" placeholder="INPUT AMOUNT" id="amount">
+        <select id="loan">
+            <option value="1">1 months</option>
+            <option value="2">2 months</option>
+            <option value="3">3 months</option>
+            <option value="6">6 months</option>
+            <option value="10">10 months</option>
+            <option value="1 ">12 months</option>
+            <option value="2 ">2 years</option>
+        </select>
+        </div>
+        <h3 class="invoice" style="text-align: center;"></h3>
+        <br><br>
+        <div>
+    <select id="payment">
+        <option value="1">1 months</option>
+        <option value="2">2 months</option>
+        <option value="3">3 months</option>
+        <option value="6">6 months</option>
+        <option value="10">10 months</option>
+        <option value="12">12 months</option>
+        <option value="24">24 months</option>
+    </select>
+    <button onclick="funsho()" class="tt">Calculate</button>
+    
+</div>
+
+
+
+
+    <script>
+        function funsho(){
+    let r = Number( document.getElementById("amount").value);
+    let w =  document.getElementById("loan").value;
+    let p = document.getElementById("payment").value;
+    let q = r * 0.1;
+    let z = Number(q) + Number(r);
+    let interest = z * w;
+    let repayment = interest / (p);
+    if(!r||isNaN(r)){
+  document.querySelector('.invoice').textContent= "make sure to enter a valid number";
+  document.querySelector('.invoice').style.color="red"
+}else{
+    document.querySelector('.invoice').textContent="You are goung to repay the amount of " + 
+    " " + interest + "in " + w + "years and" + repayment +"in " + p + "months";
+    document.querySelector('.invoice').style.color="gold";
+}
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myname" onsubmit="return Validate()">
+        <label>FIRST NAME</label>
+        <h4 class="invoice"></h4>
+        <input type="text" name="input1">
+        <br>
+        <label>AGE</label>
+        <input type="number" name="input2">
+        <input type="submit" value="submit">
+    </form>
+    <br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const example = /^[0-9]+$/;
+        const myform = /^[a-zA-Z]+$/;
+        function Validate() {
+            if (!document.myname.input1.value.match(myform)) {
+                document.querySelector('.invoice').textContent = "! please fill the correct thing"
+                document.querySelector('.invoice').style.color = "red";
+                document.myname.input1.focus() ;
+                return false;
+            }
+            if (!document.myname.input2.value.match(example)) {
+                document.querySelector('.invoice').textContent = "! please fill the appropriate thing"
+                document.querySelector('.invoice').style.color = "red";
+                document.myname.input2.focus() ;
+                return false;
+            }
+            
+            else {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+if(bvn.lenght !=11){
+    a.disable="enable"
+}else{a.disable="disable"}
