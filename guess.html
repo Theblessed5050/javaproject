@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body id='pagebody'>
+<body id='pagebody' style="background-color: aqua;">
 
 
   <meta charset="UTF-8">
@@ -42,9 +42,7 @@
               <li class="nav-item ms-3">
                 <a class="nav-link " href="guess.html">MY NUMBER</a>
               </li>
-              <li class="nav-item ms-3">
-                <a class="nav-link  tool" href="metaopensource.html">META</a>
-              </li>
+              
             </ul>
             
           </div>
@@ -60,26 +58,26 @@
 
 
   
-<div style="width:500px; margin:0px auto; padding: 20px" >
-  <h1> GUES MY NUMBER GAME </h1>
+<div style=" margin:0px auto; padding: 20px;text-align: center;" class="col-lg-12" >
+  <h1 style="color: rgb(125, 201, 10);"> GUESS MY NUMBER GAME </h1>
   
   <h3 class='message' > </h3>
   
-  <input class='mynumber' placeholder='gues a nuimber btw 1 and 20' style="width: 60%; border-radius: 5px; background-color: black;color: white;"/> 
+  <input class='mynumber' placeholder='GUESS A NUMBER' style="width: 20%; border-radius: 5px; background-color: black;color: white;text-align: center;"/> 
   
-  <h1 class='number' style='width:350px;'> The number is ??</h1>
+  <h1 class='number' style='text-align: center;'> The number is ??</h1>
   
-  <button class='check' style="text-align: center;width: 30%;">check</button>
+  <button class='check' style="text-align: center;width: 10%; background-color: blue; border-radius: 5px;">check</button>
 </div>
 
   <script>
-  const secretNumber = Math.trunc(Math.random()*20) + 1;
+  const secretNumber = Math.trunc(Math.random()*100) + 1;
   
    document.querySelector('.check').addEventListener('click', function(){
   const gues = Number(document.querySelector('.mynumber').value);
   
-  if(!gues||isNaN(gues)|| gues>20){
-  document.querySelector('.message').textContent= "make sure to enter a valid number btw 1 and 20 only";
+  if(!gues||isNaN(gues)|| gues>100){
+  document.querySelector('.message').textContent= "make sure to enter a valid number btw 1 and 100 only";
   document.querySelector('.message').style.color="red"
 }else if(gues===secretNumber){
   document.querySelector('.message').textContent= "yeah, you are correct";
